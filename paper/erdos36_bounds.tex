@@ -1,0 +1,493 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{00B5}{\ensuremath{\mu}}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,array,geometry,microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\geometry{margin=25mm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\pos}[1]{(#1)_+}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Ncal}{\mathcal N}
+\newcommand{\Bcal}{\mathcal B}
+\setlength{\emergencystretch}{2em}
+\title{Explicit two-sided bounds for Erd\H{o}s's minimum-overlap problem}
+\author{Cristian Budala\\\small University of Bucharest}
+\date{Working draft}
+\begin{document}
+\maketitle
+\begin{abstract}
+Let $M(N)$ be the least possible maximum multiplicity of an ordered difference between the two classes of a balanced partition of $\{1,\ldots,2N\}$.
+We prove
+\[
+L\leq\liminf_{N\to\infty}\frac{M(N)}N
+\leq\limsup_{N\to\infty}\frac{M(N)}N\leq U,
+\]
+where
+\begin{gather*}
+L=\frac{3945957506942881}{10368080969891328}
+ =0.38058706508965855\ldots,\\
+U=\frac{1247990868533174455263346437}{3276800000000000000000000000}
+ =0.38085658829747755\ldots.
+\end{gather*}
+The lower bound follows from a finite Fourier--moment certificate, integrated subadditivity inequalities and a complete cover of the moment domain.
+The upper bound is attained by an explicit rational step function.
+The two certificates are checked using integer and rational arithmetic, with analytic bounds for every numerical integration error. We also give finite-$N$ versions of both bounds.
+\end{abstract}
+
+\section{Introduction}
+For a partition $A\sqcup B=\{1,\ldots,2N\}$ with $|A|=|B|=N$, write
+\[
+r_{A,B}(k)=\#\{(a,b)\in A\times B:a-b=k\},\qquad
+M(N)=\min_{A,B}\max_{k\in\Z}r_{A,B}(k).
+\]
+The maximum includes both signs of $k$ and is normalized by $N$, not $2N$.
+For Erd\H{o}s's own discussions, see~\cite{Erdos1955,Erdos1956,Erdos1961,Erdos1992}; for historical bounds, see Moser~\cite{Moser} and Haugland~\cite{Haugland1996,Haugland2016}.
+Haugland attributes the continuous formulation to Swinnerton-Dyer.
+Our finite estimates do not require either the existence of the limiting constant or equality with a continuous infimum.
+
+White's Fourier--moment relaxation~\cite{White} is the starting point for the lower certificate. Price~\cite{Price} developed public mean-bin certificates based on positive-part integration; Raval~\cite{Raval} and Deng~\cite{Deng} subsequently refined the central region. Related moment and certificate investigations include Kim and Pilanci~\cite{KimPilanci}, Zanghi~\cite{Zanghi} and Occis~\cite{Occis}; the Station work~\cite{Station} is also part of this computational literature.
+The subadditivity inequality and its integrated use are due to Machillari Dowgu\~niec~\cite{Machillari}. His explicit global lower bound $100000000/262768281$ is smaller than $L$.
+The present gain comes from the evaluated correction and residual bounds below, rather than a claim to have invented these general methods.
+
+The upper profile was obtained by refining a balanced repair of MILO's rounded public replay~\cite{MILO}. Our $U$ is below the reported MILO score $0.3808567743668193$, but we have not checked the original full-precision construction. We do not claim a new record. Further research and software credits are given in the accompanying source register.
+
+\begin{theorem}\label{thm:main}
+For every positive integer $N$,
+\begin{equation}\label{eq:finite-lower}
+\frac{M(N)}N\geq L.
+\end{equation}
+For every integer $N\geq2$,
+\begin{equation}\label{eq:finite-upper}
+\frac{M(N)}N\leq U+\frac{V}{2N}
+             +2\sqrt{\frac{8\log N}{N}},
+\qquad V=\frac{499783679610151}{16000000000000}.
+\end{equation}
+Here $\log$ is the natural logarithm. In particular, the bounds in the abstract hold.
+\end{theorem}
+
+\section{The continuous lower bound}\label{sec:lower}
+An admissible profile is a measurable $p:[-1,1]\to[0,1]$ with $\int p=1$.
+Let $g=1-p$ on $[-1,1]$, and extend \emph{both} $p$ and $g$ by zero outside this interval. Put
+\[
+C(t)=\int_{\R}p(x)g(x-t)\dd x,\qquad M=\sup_{t\in\R}C(t).
+\]
+Then $C\geq0$, $\operatorname{supp}C\subseteq[-2,2]$ and $\int C=1$.
+All uses of Fubini below are justified by boundedness and compact support.
+We shall prove $M\geq L$ for every admissible profile.
+
+Set $h=p-1/2$ on $[-1,1]$, with $h=0$ elsewhere, and define
+\[
+z=2\int xh(x)\dd x,\qquad v=\int x^2h(x)\dd x,
+\qquad m_3=\int x^3h(x)\dd x.
+\]
+We have $\int h=0$ and $|h|\leq1/2$. The pointwise inequalities
+\[
+x(p(x)-\ind_{[0,1]}(x))\leq0,\qquad
+(x^2-1/4)(p(x)-\ind_{[-1/2,1/2]}(x))\geq0
+\]
+give $|z|\leq1$ (using reflection for the first inequality) and $v\geq-1/4$; complementation gives $v\leq1/4$.
+Reflection sends $(z,v)$ to $(-z,v)$, while complementation sends it to $(-z,-v)$; both preserve $M$.
+It is therefore enough to consider
+\begin{equation}\label{eq:moment-box}
+\Bcal=[0,1]\times[0,1/4].
+\end{equation}
+This reduction concerns moment signs only; no symmetry of $p$ is assumed.
+
+\subsection{A finite-frequency inequality}
+For a fixed coefficient tuple, let
+\begin{align*}
+\Psi(t)&=A-Bt^2+Dt^4+Et-\sum_j q_j\cos(w_jt)+\sum_j d_j\sin(w_jt),\\
+X_j&=\int h(x)\cos(w_jx)\dd x,\quad
+Y_j=\int h(x)\sin(w_jx)\dd x,\quad s_j=\frac{\sin w_j}{w_j},
+\end{align*}
+where $B,D\geq0$, $q_j>0$ and $w_j>0$.
+Fubini gives the signed Fourier identity
+\[
+\int C(t)e^{iw_jt}\dd t
+=(s_j+X_j+iY_j)(s_j-X_j+iY_j)
+=s_j^2-X_j^2-Y_j^2+2is_jY_j.
+\]
+Expanding powers of the difference of the occupied and complementary coordinates also gives
+\begin{equation}\label{eq:moments}
+\int tC(t)\dd t=z,\quad
+\int t^2C(t)\dd t=\frac23+\frac{z^2}2,\quad
+\int t^4C(t)\dd t=\frac{16}{15}-6v^2+4zm_3.
+\end{equation}
+For example, in the last identity the fourth-moment sum is $2/5$, the second-moment term is $6(1/9-v^2)$, and the first/third cross terms sum to $4zm_3$.
+
+Choose auxiliary coefficients $a_j,b_j,\theta,\kappa,\mu$, and set
+\begin{align*}
+H_0&=A-\frac{2B}3+\frac{16D}{15}-\sum_j q_js_j^2,
+& T&=\sum_j\frac{a_j^2+b_j^2}{q_j},\\
+R_z(u)&=4Dzu^3+2\sum_j\bigl(a_j\cos(w_ju)+(b_j+d_js_j)\sin(w_ju)\bigr)
+              -\theta-2\kappa u-\mu u^2,\\
+Q(z)&=\frac12\int_{-1}^1|R_z(u)|\dd u,
+& P&=\int_{-2}^2\pos{\Psi(t)}\dd t,\\
+\Ncal(z,v)&=H_0-T-Q(z)-\frac B2z^2-6Dv^2+(E+\kappa)z+\mu v.
+\end{align*}
+Completing the two Fourier squares yields
+\begin{align}
+\int\Psi C
+={}&H_0-T-\frac B2z^2-6Dv^2+(E+\kappa)z+\mu v+\int R_zh\notag\\
+&+\sum_jq_j\left[\left(X_j-\frac{a_j}{q_j}\right)^2
+                 +\left(Y_j-\frac{b_j}{q_j}\right)^2\right].\label{eq:squares}
+\end{align}
+Hence
+\begin{equation}\label{eq:row}
+\Ncal(z,v)\leq\int\Psi C\leq MP.
+\end{equation}
+The first inequality uses $|h|\leq1/2$; the second uses $0\leq C\leq M$.
+Every coordinate in~\eqref{eq:squares} comes from the same profile.
+Moreover, $Q$ is convex in $z$, so $\Ncal$ is concave in $(z,v)$.
+For a fixed positive denominator, lower bounds at four rectangle vertices therefore suffice throughout that rectangle. Concavity is asserted for the true numerator, not for a table of rounded bounds.
+
+\subsection{Subadditivity and corrections}\label{sec:corrections}
+Following Machillari Dowgu\~niec~\cite{Machillari}, write
+\[
+\mathcal D(a,b)=a+b-2ab,\qquad S(t)=C(t)+C(-t).
+\]
+For $a,b,c\in[0,1]$,
+\[
+\mathcal D(a,b)+\mathcal D(b,c)-\mathcal D(a,c)
+=2\{b(1-a)(1-c)+(1-b)ac\}\geq0.
+\]
+Also $S(t)=\int_{-1+t}^1\mathcal D(p(x),p(x-t))\dd x$ for $0\leq t\leq2$.
+If $s,t\geq0$ and $s+t\leq2$, then $S(s)+S(t)-S(s+t)$ equals
+\begin{align*}
+&\int_{-1+s}^{-1+s+t}\mathcal D(p(x),p(x-s))\dd x
++\int_{1-s}^{1}\mathcal D(p(y),p(y-t))\dd y\\
+&\quad+\int_{-1+s+t}^1\bigl(\mathcal D(a,b)+\mathcal D(b,c)-\mathcal D(a,c)\bigr)\dd x,
+\end{align*}
+where $a=p(x)$, $b=p(x-s)$ and $c=p(x-s-t)$.
+All three integrals are nonnegative. Thus
+\begin{equation}\label{eq:subadd}
+S(s+t)\leq S(s)+S(t).
+\end{equation}
+The two boundary integrals are both retained, even when their intervals coincide.
+
+Put $h_0=1/2000$. For integers $0<k\leq l$ and $\gamma>0$, define the even, half-open step function
+\begin{align*}
+e_{k,l}(u)={}&\gamma\ind_{[kh_0,(k+1)h_0)}(|u|)
+ +\gamma\ind_{[lh_0,(l+1)h_0)}(|u|)\\
+&-\frac\gamma2\ind_{[(k+l)h_0,(k+l+2)h_0)}(|u|).
+\end{align*}
+A change of variable gives
+\[
+\int e_{k,l}C=\gamma\int_{kh_0}^{(k+1)h_0}
+\bigl[S(s)+S(s+(l-k)h_0)-S(2s+(l-k)h_0)\bigr]\dd s\geq0.
+\]
+The table uses only pairs for which the arguments lie in $[0,2]$.
+Consequently, for any sum $e$ of these corrections,
+\begin{equation}\label{eq:correction-direction}
+\Ncal\leq\int\Psi C\leq\int(\Psi+e)C.
+\end{equation}
+When $k=l$, the two additions are counted twice.
+
+The supplied table has 26 pairs and separate positive weights for rows 9 and 11 of the coefficient data. After all overlaps have been summed, additions stay in the negative part of the kernel and removals stay in its positive part, almost everywhere. The supports of additions and removals are disjoint.
+The positive-part integrals therefore decrease by $2h_0\sum\gamma$, namely
+\begin{equation}\label{eq:losses}
+\delta_9=\frac{890721}{50000000000},\qquad
+\delta_{11}=\frac{362917}{20000000000}.
+\end{equation}
+Appendix~\ref{app:numerics} proves the whole-cell sign tests used here. Half-open representatives avoid counting adjacent endpoints twice; changing finitely many endpoint values changes none of the integrals.
+
+We also use the even tuple obtained from row 9 by setting $E=\kappa=0$ and $b_j=d_j=0$.
+Its kernel is the average of the two reflected old kernels. The same correction signs hold, its original positive area is at most that of row 9, and $Q_{\rm even}(0)\leq Q_9(0)$.
+The removed square penalty is bounded below by
+\begin{equation}\label{eq:beta}
+\beta=\sum_j\frac{\lfloor10^{12}b_j^2/q_j\rfloor}{10^{12}}
+     =\frac{10206362}{10^{12}}.
+\end{equation}
+This is credited to the numerator of the even tuple only.
+
+\subsection{Capacity and the order of feedback}\label{sec:capacity}
+Since $\mathcal D(a,b)\leq1$ on $[0,1]^2$, we have $S(t)\leq2-t$.
+Writing $a=\pos{\Psi(t)}$ and $b=\pos{\Psi(-t)}$, the pointwise bounds on $C(t),C(-t)$ give
+\begin{equation}\label{eq:capacity}
+\int\Psi C\leq MP-K(M),
+\quad K(M)=\int_0^2\left[\min(a,b)\pos{2M-2+t}+|a-b|\pos{M-2+t}\right]\dd t.
+\end{equation}
+For example, if $a\geq b$, the integrand on the left is at most
+$b\min(2M,2-t)+(a-b)\min(M,2-t)$.
+
+For an already proved lower bound $m\leq M$, the elementary inequality
+$\pos{x+d}\geq\pos{x}+d\ind_{\{x>0\}}$ for $d\geq0$ implies
+\begin{align}
+K(M)&\geq K(m)+S_m(M-m),\label{eq:feedback}\\
+S_m&=\int_0^2\left[2\min(a,b)\ind_{\{t>2-2m\}}
+                  +|a-b|\ind_{\{t>2-m\}}\right]\dd t.\notag
+\end{align}
+The order of the calculation matters. The original 19 tuples, their rectangle cover and regenerated integrals first give
+\[
+b_0=\frac{389715084421}{1024033344512}>\frac{151}{400}.
+\]
+For row 9 the checker proves $\min(\Psi(t),\Psi(-t))>1/200000$ on
+$J=[299/200,301/200]$.
+Since $2(151/400)-2+299/200=1/4$, this gives the local capacity charge
+$|J|/(4\cdot200000)=1/80000000$.
+Using the refined integrals then proves
+\begin{equation}\label{eq:baseline}
+b_1=\frac{16238132272123}{42667759958016}.
+\end{equation}
+Only now is~\eqref{eq:feedback} used. Direct integration at $b_1$ gives
+\begin{equation}\label{eq:capacity-data}
+K(b_1)\geq k_0=\frac{116187}{10^{12}},\qquad
+S_{b_1}\geq s_0=\frac{1486353}{10^{12}}.
+\end{equation}
+Thus, if $\overline P$ is an upper bound for $P$, row 9 gives
+\[
+M\geq\frac{\Ncal+k_0-s_0b_1}{\overline P-s_0},
+\qquad \overline P-s_0>0.
+\]
+There is no use of $L$ to establish its own baseline.
+
+If $M\geq1/2$, the desired bound is immediate. Otherwise both hinges in~\eqref{eq:capacity} vanish on the changed support, which is contained in $|t|\leq31/1000$.
+The corrected asymmetric row 9 therefore retains the old capacity credit.
+The even tuple and row 11 receive no inherited capacity credit.
+
+\section{The finite lower certificate}\label{sec:certificate}
+All integers are embedded in \texttt{verify\_erdos36\_l60.py}.
+The data consist of 19 tuples, numbered $0,\ldots,18$, and their rectangles.
+Each scalar and vector coefficient has denominator $10^8$; the scalar order is
+$(A,B,D,E,\theta,\kappa,\mu)$.
+The rectangle coordinates use denominators 32 for $z$ and 128 for $v$.
+The 18 frequencies are
+\[
+(w_j)_j=\tfrac14(4,22,23,32,33,44,45,57,58,72,74,82,84,108,132,138,140,160),
+\]
+with no factor of $\pi$.
+The correction weights also have denominator $10^8$.
+These explicit data, together with the analytic bounds in Appendix~\ref{app:numerics}, suffice to reconstruct every asserted enclosure; no optimizer output or historical enclosure is assumed.
+
+For row 9 the refined vector
+$(\overline P,\underline H_0,\overline T,\overline Q(0),\overline Q(1/32))$ is
+\begin{equation}\label{eq:refined-vector}
+10^{-12}(1000025624016,384885046297,2271134131,8647757668,9045197826).
+\end{equation}
+At $z_d=1/1800$, fresh integration gives
+\begin{equation}\label{eq:fresh-q}
+Q_{\rm even}(z_d)\leq\frac{8649077068}{10^{12}},\qquad
+Q_9(z_d)\leq\frac{8649114950}{10^{12}}.
+\end{equation}
+Between certified $z$ endpoints, convexity of $Q$ supplies the upper interpolation bound.
+For row 8, the cubic part of $R_z$ gives
+\[
+|Q(z)-Q(z')|\leq\frac12\int_{-1}^1|4D(z-z')u^3|\dd u=D|z-z'|.
+\]
+This justifies extending that row from $z\geq1/32$ to $z\geq3/128$ on the strip below.
+
+Replace rows 8 and 9 on $21/128\leq v\leq11/64$ by
+\[
+\begin{array}{ccl}
+{[0,1/1800]}&\times[21/128,11/64]&\text{corrected even row 9},\\
+{[1/1800,3/128]}&\times[21/128,11/64]&\text{corrected asymmetric row 9},\\
+{[3/128,1/16]}&\times[21/128,11/64]&\text{extended unchanged row 8}.
+\end{array}
+\]
+Use the corrected kernel on row 11's original rectangle, and leave the other assignments unchanged.
+The resulting 20 closed rectangles cover $\Bcal$. The checker verifies the following chains on the open horizontal strips:
+\begin{center}\small
+\begin{tabular}{ll}\toprule
+$v$ range & Consecutive $z$ endpoints\\\midrule
+$(0,1/16)$ & $0,1/4,1/2,1$\\
+$(1/16,1/8)$ & $0,1/4,1/2,1$\\
+$(1/8,5/32)$ & $0,1/8,1/4,1/2,1$\\
+$(5/32,21/128)$ & $0,1/32,1/16,1/8,1/4,1/2,1$\\
+$(21/128,11/64)$ & $0,1/1800,3/128,1/16,1/8,1/4,1/2,1$\\
+$(11/64,3/16)$ & $0,1/16,1/8,1/4,1/2,1$\\
+$(3/16,1/4)$ & $0,1/4,1/2,1$\\\bottomrule
+\end{tabular}
+\end{center}
+The finite union of closed rectangles is closed, so coverage of these dense open strips also covers their seams and the outer boundary. Intersections of the coordinate cuts are checked separately.
+
+For each rectangle, the checker evaluates its four vertices, using the appropriate numerator and fixed positive denominator from~\eqref{eq:row} or~\eqref{eq:feedback}, with~\eqref{eq:losses} and~\eqref{eq:beta} where applicable. All 80 certified ratios are at least $L$.
+The minimum occurs at $z=1/1800$, $v=11/64$ for the even tuple, where the conservative numerator and denominator are
+\[
+\frac{3945957506942881}{10368000000000000},\qquad
+\frac{1000025624016}{10^{12}}-\frac{890721}{50000000000}
+=\frac{250001952399}{250000000000}.
+\]
+Their quotient is $L$. Concavity on each rectangle proves $M\geq L$ throughout $\Bcal$, hence for every admissible profile. The conclusion is non-strict; it does not assert sharpness or attainment of the infimum.
+
+\subsection{The finite partition bound}
+Given $A,B$, let $p$ be the indicator of the cells
+$I_j=[-1+(j-1)/N,-1+j/N)$ indexed by $A$.
+Its interval complement consists of the $B$ cells. Literal intersection gives
+\[
+|I_a\cap(I_b+t)|=\frac1N\pos{1-|Nt-(a-b)|}.
+\]
+Therefore, for every signed integer $k$ and $0\leq\lambda\leq1$,
+\[
+C((k+\lambda)/N)=\frac{(1-\lambda)r_{A,B}(k)+\lambda r_{A,B}(k+1)}N.
+\]
+It follows that $\sup_t C(t)=\max_k r_{A,B}(k)/N$, proving~\eqref{eq:finite-lower}.
+For example, $N=1$, $A=\{1\}$, $B=\{2\}$ has its peak at lag $-1$, not $+1$.
+
+\section{The upper construction and finite transfer}\label{sec:upper}
+Translate the interval to $I=[0,2)$, which does not change the overlap.
+The source \texttt{verify\_erdos36\_u54.py} contains 2048 integers $a_i$.
+With $H=1024$ and $E=32000000000000$, set
+\[
+p(x)=\frac{a_i}{E}\quad\left(\frac iH\leq x<\frac{i+1}H\right),\qquad 0\leq i<2048.
+\]
+Exact arithmetic verifies $0\leq a_i\leq E$ and $\sum_i a_i=HE$.
+At every signed event,
+\[
+C_p(k/H)=\frac{1}{HE^2}\sum_{\max(0,k)\leq i<\min(2048,2048+k)}a_i(E-a_{i-k}).
+\]
+All 4097 events, including the support endpoints, are checked.
+The maximum is exactly $U$ and occurs at $k=\pm295$.
+Each cell-pair overlap is a triangle with breakpoints on this grid, so the correlation is affine between consecutive events and zero outside $[-2,2]$. Thus the event scan proves the bound for every real lag.
+The same data give the actual internal variation
+\[
+V=\sum_{i=0}^{2046}\frac{|a_{i+1}-a_i|}{E}
+ =\frac{499783679610151}{16000000000000}.
+\]
+
+We give the rounding argument to specify the finite-$N$ error.
+Average $p$ over the $2N$ bins of length $\ell=1/N$, obtaining a profile $q$ with heights $q_i=N\int_{J_i}p$, so $0\leq q_i\leq1$ and $\sum_iq_i=N$.
+On a bin $J=[a,b)$,
+\[
+\int_J|p-q|\leq\ell^{-1}\int_J\int_J|p(x)-p(y)|\dd x\dd y.
+\]
+A jump at $s\in J$ contributes at most its absolute height times
+$2(s-a)(b-s)/\ell\leq\ell/2$.
+Summing all internal jumps gives
+\begin{equation}\label{eq:bin-error}
+\|p-q\|_1\leq\frac{V}{2N}.
+\end{equation}
+Jumps on bin boundaries contribute zero; the support endpoints are bin boundaries.
+For two profiles on the same interval, with $d=p-q$, direct expansion gives
+\begin{equation}\label{eq:shared-complement}
+C_p(t)-C_q(t)=\int d(x)\bigl[g_p(x-t)-q(x+t)\bigr]\dd x.
+\end{equation}
+The bracket lies in $[-1,1]$, so $\Phi(q)\leq U+V/(2N)$, where $\Phi(q)=\sup_tC_q(t)$.
+
+Choose independent Bernoulli variables $X_i$ with means $q_i$ and write $T=\sum_iX_i$.
+For a nonzero signed lag $k$, set
+\[
+R_k=\sum_{i,\,i-k\in\{1,\ldots,2N\}}X_i(1-X_{i-k}).
+\]
+Distinct factors in each term are independent, whence
+$\mathbb ER_k=NC_q(k/N)\leq NU+V/2$ and $\mathbb ET=N$.
+Changing $X_i$ from 0 to 1 changes $R_k$ by
+\[
+\ind_{\{i-k\text{ valid}\}}(1-X_{i-k})-
+\ind_{\{i+k\text{ valid}\}}X_{i+k}\in[-1,1].
+\]
+Thus $R_k$ and $T$ have one-bit sensitivity at most one.
+The bounded-differences inequality~\cite{Hoeffding,McDiarmid} gives
+\[
+\Pr(F-\mathbb EF\geq u)\leq\exp(-2u^2/(2N))
+\]
+for any such function of these $2N$ independent bits.
+For clarity, expose the bits successively: each centered conditional-mean increment has range length at most one, so Hoeffding's estimate bounds its exponential moment by $e^{\lambda^2/8}$. Iteration and Markov's inequality, optimized at $\lambda=2u/N$, give the displayed tail.
+Applying both tails to $T$ and the upper tail to the $4N-2$ nonzero counts, with
+$t=\sqrt{8\log N/N}$ and $u=Nt$, bounds total failure probability by
+$4N e^{-Nt^2}=4/N^7<1$ for $N\geq2$.
+A realization therefore exists with
+\[
+R_k\leq NU+V/2+Nt\quad(k\ne0),\qquad |T-N|\leq Nt.
+\]
+Flip exactly the integer $|T-N|$ excess labels to obtain a balanced partition.
+Each count rises by at most this many, proving~\eqref{eq:finite-upper}.
+At zero lag every binary count is identically zero; no independence assertion is made there.
+No ceiling error is needed in the repair.
+
+\section{Reproduction and acknowledgments}
+Copy \texttt{verify\_erdos36\_l60.py} and \texttt{verify\_erdos36\_u54.py} to an empty directory and run, on a POSIX system with Python 3,
+\begin{verbatim}
+python3 -I -S -B verify_erdos36_l60.py
+python3 -I -S -B verify_erdos36_u54.py
+\end{verbatim}
+Each file embeds its complete data and uses only the Python standard library.
+Assertions must remain enabled; both scripts reject \texttt{-O} and \texttt{-OO}.
+The lower checker regenerates the integral bounds and verifies 80 vertices and the complete 20-rectangle cover. The upper checker returns the exact maximum and variation above.
+The accompanying source register distinguishes prior certificates, discovery software and exact verification, and credits the Python community~\cite{Python} and other software contributors.
+
+OpenAI GPT models assisted mathematical exploration, programming, numerical checks and drafting. Google Gemini models also participated in earlier research and checks.
+The manuscript has not yet undergone independent mathematical review.
+
+\appendix
+\section{Numerical enclosures}\label{app:numerics}
+The interval implementation follows standard outward-rounding principles; Moore, Kearfott and Cloud~\cite{Interval} provide a general reference. We give the error estimates here so that no numerical premise is left to a floating-point assumption.
+Intervals have integer endpoints at scale $10^{60}$. Products use all four endpoint products; rational scaling rounds lower endpoints down and upper endpoints up. Repeated-operand dependence may widen an interval but does not invalidate it. Intersecting a sine or cosine enclosure with $[-1,1]$ is valid because the true value already lies there.
+
+\subsection{Trigonometry and whole-cell signs}
+For $0\leq t\leq80$, reduce to $x=t/128\leq5/8$.
+Cosine through degree 62 and sine through degree 63 have respective error bounds
+$(5/8)^{64}/64!$ and $(5/8)^{65}/65!$.
+Seven outward double-angle steps enclose the required values.
+The coarse grid uses a separate recurrence: for $\Delta=w/4096\leq5/512$, use 17 Taylor terms, with remainders $\Delta^{34}/34!$ and $\Delta^{35}/35!$, and propagate by exact angle-addition identities with outward rounding.
+
+For the correction signs, let $P_{15}(t)=\sum_{n=0}^{15}c_nt^n$ be the exact Taylor polynomial of $\Psi$, and $H_*=31/1000$.
+Throughout $|t|\leq H_*$,
+\[
+|\Psi-P_{15}|\leq\epsilon=\sum_j(q_j+|d_j|)\frac{(w_jH_*)^{16}}{16!},\quad
+|\Psi'-P_{15}'|\leq\epsilon'=\sum_j(q_j+|d_j|)w_j\frac{(w_jH_*)^{15}}{15!}.
+\]
+The checker proves $c_2>0$ and, on each active cell $[jh_0,(j+1)h_0]$,
+\[
+2c_2jh_0-|c_1|-\epsilon'
+ -\sum_{n=3}^{15}n|c_n|((j+1)h_0)^{n-1}>0.
+\]
+This bounds the derivative of both $\Psi(t)$ and $\Psi(-t)$ as functions of positive $t$.
+At addition cells, the outer endpoint plus $\epsilon$ and the \emph{aggregate} added height remains negative.
+At removal cells, the inner endpoint minus $\epsilon$ and the aggregate removed height remains positive.
+These tests prove~\eqref{eq:losses} on whole cells without assuming simple roots or differentiability after clipping.
+
+\subsection{Quadrature bounds}
+If $|f''|\leq M_2$ on $[a,b]$ and $\mathcal L$ is its endpoint chord, elementary interpolation gives
+\[
+|f(x)-\mathcal L(x)|\leq\tfrac12M_2(x-a)(b-x),\qquad
+\int_a^b|f-\mathcal L|\leq\frac{M_2(b-a)^3}{12}.
+\]
+Positive part and absolute value are 1-Lipschitz.
+For a maximum of finitely many functions with the same curvature bound, each individual chord lies below the chord joining the endpoint maxima. Thus a single interpolation error suffices for the maximum; clipped functions are never differentiated.
+Valid curvature bounds are
+\begin{align*}
+M_P&=2B+48D+\sum_j(q_j+|d_j|)w_j^2,\\
+M_R(z)&=2|\mu|+24D|z|+2\sum_j(|a_j|+|b_j+d_js_j|)w_j^2.
+\end{align*}
+With $n$ cells on each signed half, the positive-area charge is $4M_P/(3n^2)$.
+Writing $R_z=e+o_z$ with $e$ even and $o_z$ odd gives
+$|e+o_z|+|e-o_z|=2\max(|e|,|o_z|)$.
+The corresponding residual charge, including the defining half in $Q$, is $M_R(z)/(12n^2)$.
+
+For refined integration, midpoint $m$ and radius $r$ give the whole-cell enclosure
+$f(m)\pm(|f'(m)|r+M_2r^2/2)$.
+Sign-certified cells are integrated by explicit primitives; other cells are subdivided up to a fixed depth and then charged in full by this enclosure.
+The capacity calculation also tests ordering of the two kernels and uses
+\begin{align*}
+\int(\alpha+\beta t)\cos(wt)\dd t
+ &=\frac{(\alpha+\beta t)\sin(wt)}w+\frac{\beta\cos(wt)}{w^2},\\
+\int(\alpha+\beta t)\sin(wt)\dd t
+ &=-\frac{(\alpha+\beta t)\cos(wt)}w+\frac{\beta\sin(wt)}{w^2}.
+\end{align*}
+Unclassified capacity cells receive zero lower credit and a full upper charge, including the slope term. Fifteen such cells remain in the calculation. They are not discarded.
+
+For the fresh residuals in~\eqref{eq:fresh-q}, midpoint-affine integration on a cell of width $\ell$ gives
+\[
+\int_{\rm cell}|R|\leq\int_{-\ell/2}^{\ell/2}|A+Bx|\dd x+M_2\ell^3/24.
+\]
+The affine integral is $|A|\ell$ when $|A|\geq|B|\ell/2$, and
+$A^2/|B|+|B|\ell^2/4$ otherwise.
+Uncertainty $\epsilon_A,\epsilon_B$ in the midpoint value and slope costs at most
+$\epsilon_A\ell+\epsilon_B\ell^2/4$.
+At $z_d=1/1800$ use
+\[
+M_{2,e}=2|\mu|+24Dz_d+2\sum_j|a_j|w_j^2,\quad
+M_{2,9}=M_{2,e}+2\sum_j(|b_j|+|d_j|/w_j)w_j^2.
+\]
+Both signed halves are integrated on a mesh of 4096 cells per half; including the defining half of $Q$, the total curvature charge is $M_2/(24\cdot4096^2)$.
+Together with outward arithmetic, these estimates regenerate~\eqref{eq:refined-vector}, \eqref{eq:fresh-q} and~\eqref{eq:capacity-data}.
+
+\input{references_main.tex}
+\end{document}

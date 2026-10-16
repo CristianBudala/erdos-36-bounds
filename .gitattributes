@@ -1,0 +1,2 @@
+* -text
+*.pdf -filter -diff -merge -text

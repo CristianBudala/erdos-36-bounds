@@ -1,0 +1,824 @@
+{
+  "scope": "Verified named proof predecessors and bibliographic metadata; software author lists retained in full, not replaced by et al.",
+  "main_entries": {
+    "Moser": {
+      "authors": "Leo Moser",
+      "title": "On the minimum overlap problem of Erdős",
+      "publication": "Acta Arithmetica 5 (1959), 117--119",
+      "url": ""
+    },
+    "Haugland1996": {
+      "authors": "Jan Kristian Haugland",
+      "title": "Advances in the Minimum Overlap Problem",
+      "publication": "Journal of Number Theory 58 (1996), 71--78",
+      "url": "https://doi.org/10.1006/jnth.1996.0064"
+    },
+    "Haugland2016": {
+      "authors": "Jan Kristian Haugland",
+      "title": "The minimum overlap problem revisited",
+      "publication": "arXiv:1609.08000 (2016)",
+      "url": "https://arxiv.org/abs/1609.08000"
+    },
+    "KimPilanci": {
+      "authors": "Sungyoon Kim, Mert Pilanci",
+      "title": "AI-Assisted Discovery of Convex Relaxations via Dual Agents",
+      "publication": "arXiv:2606.31182 (2026)",
+      "url": "https://arxiv.org/abs/2606.31182"
+    },
+    "MILO": {
+      "authors": "Prithwish Jana, Mononito Goswami, Hao Liu, Xinyu Li, Langlin Huang, Zhehui Huang, Zhishen Huang, Patrick Blöbaum, Anoop Deoras, Purak Jain, Nikos Kanakaris, Sahika Genc",
+      "title": "MILO: Automated Harness Discovery via Orchestrated Multi-Agent Evolution",
+      "publication": "arXiv:2609.38349 (2026)",
+      "url": "https://arxiv.org/abs/2609.38349"
+    },
+    "Station": {
+      "authors": "Stephen Chung, Wenyu Du, William J. Wesley",
+      "title": "Autonomous Mathematical Discovery in an Open-World Multi-Agent Environment",
+      "publication": "arXiv:2608.23691 (2026)",
+      "url": "https://arxiv.org/abs/2608.23691"
+    },
+    "White": {
+      "authors": "Ethan Patrick White",
+      "title": "A new bound for Erdős’ minimum overlap problem",
+      "publication": "Acta Arithmetica 208 (2023), 235-255",
+      "url": "https://doi.org/10.4064/aa220728-7-6"
+    },
+    "Price": {
+      "authors": "Liam Price",
+      "title": "A Certified Lower Bound for Minimum Overlap",
+      "publication": "Public proof note and certificate package (2026)",
+      "url": "https://github.com/Leeham06972452/erdos-36-lower-bound"
+    },
+    "Raval": {
+      "authors": "Ruturaj R Raval",
+      "title": "The Erdos Minimum-Overlap Constant Exceeds 0.38055925",
+      "publication": "Public certificate, version 0.3.1 (2026)",
+      "url": "https://doi.org/10.5281/zenodo.22647743"
+    },
+    "Deng": {
+      "authors": "Haowen Deng",
+      "title": "A Sharper Certified Lower Bound for Erdős’ Minimum-Overlap Problem",
+      "publication": "Public proof note and certificate (2026)",
+      "url": "https://doi.org/10.5281/zenodo.22279894"
+    },
+    "Machillari": {
+      "authors": "Bautista Machillari Dowguñiec",
+      "title": "A Certified Lower Bound for Erdős’s 36 (Minimum-Overlap Problem) via Subadditivity Constraints and Exact Arithmetic",
+      "publication": "Manuscript, 19 September 2026",
+      "url": "https://drive.google.com/file/d/1ThaY0esdiK47E6jL2IGkh11UxkeqzRPy/view"
+    },
+    "Zanghi": {
+      "authors": "Ben Zanghi (repository maintainer)",
+      "title": "Erdős minimum overlap problem — improved lower bound on µ",
+      "publication": "Public research repository (2026)",
+      "url": "https://github.com/bzanghi/erdos-minimum-overlap-bochner"
+    },
+    "Occis": {
+      "authors": "Nicolas Occis (repository maintainer)",
+      "title": "A certified lower bound for Erdős’s minimum-overlap problem",
+      "publication": "Public certificate and checking reports (2026)",
+      "url": "https://github.com/occisn/erdos-36-certified-lower-bound"
+    },
+    "Python": {
+      "authors": "Guido van Rossum, the Python core contributors, and the Python Software Foundation",
+      "title": "Python 3: History and License",
+      "publication": "Software documentation",
+      "url": "https://docs.python.org/3/license.html"
+    },
+    "Hoeffding": {
+      "authors": "Wassily Hoeffding",
+      "title": "Probability Inequalities for Sums of Bounded Random Variables",
+      "publication": "Journal of the American Statistical Association 58 (1963), 13-30",
+      "url": "https://doi.org/10.1080/01621459.1963.10500830"
+    },
+    "McDiarmid": {
+      "authors": "Colin McDiarmid",
+      "title": "On the method of bounded differences",
+      "publication": "Surveys in Combinatorics, 1989  (1989), 148-188",
+      "url": "https://doi.org/10.1017/cbo9781107359949.008"
+    },
+    "Interval": {
+      "authors": "Ramon E. Moore, R. Baker Kearfott, Michael J. Cloud",
+      "title": "Introduction to Interval Analysis",
+      "publication": "  (2009)",
+      "url": "https://doi.org/10.1137/1.9780898717716"
+    },
+    "Er55": {
+      "authors": "Paul Erdős",
+      "title": "Some remarks on number theory",
+      "publication": "Riveon Lematematika(1955),45–48",
+      "url": "https://www.erdosproblems.com/bibs/Er55",
+      "role": "original discussion listed on problem36; bibliographical metadata verified; no historical theorem imported as a premise"
+    },
+    "Er56": {
+      "authors": "Paul Erdős",
+      "title": "Problems and results in additive number theory",
+      "publication": "Colloque sur la Théorie des Nombres, Bruxelles,1955(1956),127–137",
+      "url": "https://www.erdosproblems.com/bibs/Er56",
+      "role": "original discussion listed on problem36; bibliographical metadata verified; no historical theorem imported as a premise"
+    },
+    "Er61": {
+      "authors": "Paul Erdős",
+      "title": "Some unsolved problems",
+      "publication": "Magyar Tud. Akad. Mat. Kutató Int. Közl.(1961),221–254",
+      "url": "https://www.erdosproblems.com/bibs/Er61",
+      "role": "original discussion listed on problem36; bibliographical metadata verified; no historical theorem imported as a premise"
+    },
+    "Er92c": {
+      "authors": "Paul Erdős",
+      "title": "Some of my forgotten problems in number theory",
+      "publication": "Hardy–Ramanujan Journal(1992),34–50",
+      "url": "https://www.erdosproblems.com/bibs/Er92c",
+      "role": "original discussion listed on problem36; bibliographical metadata verified; no historical theorem imported as a premise"
+    }
+  },
+  "software_entries": {
+    "numpy": {
+      "title": [
+        "Array programming with NumPy"
+      ],
+      "authors": [
+        "Charles R. Harris",
+        "K. Jarrod Millman",
+        "Stéfan J. van der Walt",
+        "Ralf Gommers",
+        "Pauli Virtanen",
+        "David Cournapeau",
+        "Eric Wieser",
+        "Julian Taylor",
+        "Sebastian Berg",
+        "Nathaniel J. Smith",
+        "Robert Kern",
+        "Matti Picus",
+        "Stephan Hoyer",
+        "Marten H. van Kerkwijk",
+        "Matthew Brett",
+        "Allan Haldane",
+        "Jaime Fernández del Río",
+        "Mark Wiebe",
+        "Pearu Peterson",
+        "Pierre Gérard-Marchant",
+        "Kevin Sheppard",
+        "Tyler Reddy",
+        "Warren Weckesser",
+        "Hameer Abbasi",
+        "Christoph Gohlke",
+        "Travis E. Oliphant"
+      ],
+      "DOI": "10.1038/s41586-020-2649-2",
+      "container": [
+        "Nature"
+      ],
+      "volume": "585",
+      "issue": "7825",
+      "page": "357-362",
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            9,
+            16
+          ]
+        ]
+      }
+    },
+    "scipy": {
+      "title": [
+        "SciPy 1.0: fundamental algorithms for scientific computing in Python"
+      ],
+      "authors": [
+        "Pauli Virtanen",
+        "Ralf Gommers",
+        "Travis E. Oliphant",
+        "Matt Haberland",
+        "Tyler Reddy",
+        "David Cournapeau",
+        "Evgeni Burovski",
+        "Pearu Peterson",
+        "Warren Weckesser",
+        "Jonathan Bright",
+        "Stéfan J. van der Walt",
+        "Matthew Brett",
+        "Joshua Wilson",
+        "K. Jarrod Millman",
+        "Nikolay Mayorov",
+        "Andrew R. J. Nelson",
+        "Eric Jones",
+        "Robert Kern",
+        "Eric Larson",
+        "C J Carey",
+        "İlhan Polat",
+        "Yu Feng",
+        "Eric W. Moore",
+        "Jake VanderPlas",
+        "Denis Laxalde",
+        "Josef Perktold",
+        "Robert Cimrman",
+        "Ian Henriksen",
+        "E. A. Quintero",
+        "Charles R. Harris",
+        "Anne M. Archibald",
+        "Antônio H. Ribeiro",
+        "Fabian Pedregosa",
+        "Paul van Mulbregt",
+        "SciPy 1.0 Contributors",
+        "Aditya Vijaykumar",
+        "Alessandro Pietro Bardelli",
+        "Alex Rothberg",
+        "Andreas Hilboll",
+        "Andreas Kloeckner",
+        "Anthony Scopatz",
+        "Antony Lee",
+        "Ariel Rokem",
+        "C. Nathan Woods",
+        "Chad Fulton",
+        "Charles Masson",
+        "Christian Häggström",
+        "Clark Fitzgerald",
+        "David A. Nicholson",
+        "David R. Hagen",
+        "Dmitrii V. Pasechnik",
+        "Emanuele Olivetti",
+        "Eric Martin",
+        "Eric Wieser",
+        "Fabrice Silva",
+        "Felix Lenders",
+        "Florian Wilhelm",
+        "G. Young",
+        "Gavin A. Price",
+        "Gert-Ludwig Ingold",
+        "Gregory E. Allen",
+        "Gregory R. Lee",
+        "Hervé Audren",
+        "Irvin Probst",
+        "Jörg P. Dietrich",
+        "Jacob Silterra",
+        "James T Webber",
+        "Janko Slavič",
+        "Joel Nothman",
+        "Johannes Buchner",
+        "Johannes Kulick",
+        "Johannes L. Schönberger",
+        "José Vinícius de Miranda Cardoso",
+        "Joscha Reimer",
+        "Joseph Harrington",
+        "Juan Luis Cano Rodríguez",
+        "Juan Nunez-Iglesias",
+        "Justin Kuczynski",
+        "Kevin Tritz",
+        "Martin Thoma",
+        "Matthew Newville",
+        "Matthias Kümmerer",
+        "Maximilian Bolingbroke",
+        "Michael Tartre",
+        "Mikhail Pak",
+        "Nathaniel J. Smith",
+        "Nikolai Nowaczyk",
+        "Nikolay Shebanov",
+        "Oleksandr Pavlyk",
+        "Per A. Brodtkorb",
+        "Perry Lee",
+        "Robert T. McGibbon",
+        "Roman Feldbauer",
+        "Sam Lewis",
+        "Sam Tygier",
+        "Scott Sievert",
+        "Sebastiano Vigna",
+        "Stefan Peterson",
+        "Surhud More",
+        "Tadeusz Pudlik",
+        "Takuya Oshima",
+        "Thomas J. Pingel",
+        "Thomas P. Robitaille",
+        "Thomas Spura",
+        "Thouis R. Jones",
+        "Tim Cera",
+        "Tim Leslie",
+        "Tiziano Zito",
+        "Tom Krauss",
+        "Utkarsh Upadhyay",
+        "Yaroslav O. Halchenko",
+        "Yoshiki Vázquez-Baeza"
+      ],
+      "DOI": "10.1038/s41592-019-0686-2",
+      "container": [
+        "Nature Methods"
+      ],
+      "volume": "17",
+      "issue": "3",
+      "page": "261-272",
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            2,
+            3
+          ]
+        ]
+      }
+    },
+    "sympy": {
+      "title": [
+        "SymPy: symbolic computing in Python"
+      ],
+      "authors": [
+        "Aaron Meurer",
+        "Christopher P. Smith",
+        "Mateusz Paprocki",
+        "Ondřej Čertík",
+        "Sergey B. Kirpichev",
+        "Matthew Rocklin",
+        "AMiT Kumar",
+        "Sergiu Ivanov",
+        "Jason K. Moore",
+        "Sartaj Singh",
+        "Thilina Rathnayake",
+        "Sean Vig",
+        "Brian E. Granger",
+        "Richard P. Muller",
+        "Francesco Bonazzi",
+        "Harsh Gupta",
+        "Shivam Vats",
+        "Fredrik Johansson",
+        "Fabian Pedregosa",
+        "Matthew J. Curry",
+        "Andy R. Terrel",
+        "Štěpán Roučka",
+        "Ashutosh Saboo",
+        "Isuru Fernando",
+        "Sumith Kulal",
+        "Robert Cimrman",
+        "Anthony Scopatz"
+      ],
+      "DOI": "10.7717/peerj-cs.103",
+      "container": [
+        "PeerJ Computer Science"
+      ],
+      "volume": "3",
+      "issue": null,
+      "page": "e103",
+      "published": {
+        "date-parts": [
+          [
+            2017,
+            1,
+            2
+          ]
+        ]
+      }
+    },
+    "highs": {
+      "title": [
+        "Parallelizing the dual revised simplex method"
+      ],
+      "authors": [
+        "Q. Huangfu",
+        "J. A. J. Hall"
+      ],
+      "DOI": "10.1007/s12532-017-0130-5",
+      "container": [
+        "Mathematical Programming Computation"
+      ],
+      "volume": "10",
+      "issue": "1",
+      "page": "119-142",
+      "published": {
+        "date-parts": [
+          [
+            2017,
+            12,
+            14
+          ]
+        ]
+      }
+    },
+    "lasserre": {
+      "title": [
+        "Global Optimization with Polynomials and the Problem of Moments"
+      ],
+      "authors": [
+        "Jean B. Lasserre"
+      ],
+      "DOI": "10.1137/s1052623400366802",
+      "container": [
+        "SIAM Journal on Optimization"
+      ],
+      "volume": "11",
+      "issue": "3",
+      "page": "796-817",
+      "published": {
+        "date-parts": [
+          [
+            2001,
+            1
+          ]
+        ]
+      }
+    },
+    "scs": {
+      "title": [
+        "Conic Optimization via Operator Splitting and Homogeneous Self-Dual Embedding"
+      ],
+      "authors": [
+        "Brendan O’Donoghue",
+        "Eric Chu",
+        "Neal Parikh",
+        "Stephen Boyd"
+      ],
+      "DOI": "10.1007/s10957-016-0892-3",
+      "container": [
+        "Journal of Optimization Theory and Applications"
+      ],
+      "volume": "169",
+      "issue": "3",
+      "page": "1042-1068",
+      "published": {
+        "date-parts": [
+          [
+            2016,
+            2,
+            22
+          ]
+        ]
+      }
+    },
+    "arb": {
+      "title": [
+        "Arb: Efficient Arbitrary-Precision Midpoint-Radius Interval Arithmetic"
+      ],
+      "author": [
+        {
+          "given": "Fredrik",
+          "family": "Johansson",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "DOI": "10.1109/tc.2017.2690633",
+      "container-title": [
+        "IEEE Transactions on Computers"
+      ],
+      "volume": "66",
+      "page": "1281-1292",
+      "published": {
+        "date-parts": [
+          [
+            2017,
+            8,
+            1
+          ]
+        ]
+      }
+    },
+    "mpfi": {
+      "title": [
+        "Motivations for an Arbitrary Precision Interval Arithmetic and the MPFI Library"
+      ],
+      "author": [
+        {
+          "given": "Nathalie",
+          "family": "Revol",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Fabrice",
+          "family": "Rouillier",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "DOI": "10.1007/s11155-005-6891-y",
+      "container-title": [
+        "Reliable Computing"
+      ],
+      "volume": "11",
+      "page": "275-290",
+      "published": {
+        "date-parts": [
+          [
+            2005,
+            8
+          ]
+        ]
+      },
+      "publisher": "Springer Science and Business Media LLC"
+    },
+    "cvxpy": {
+      "authors": [
+        "Steven Diamond",
+        "Stephen Boyd"
+      ],
+      "title": "CVXPY: A Python-Embedded Modeling Language for Convex Optimization",
+      "publication": "JMLR17(83),1–5(2016)",
+      "url": "https://www.jmlr.org/papers/v17/15-408.html"
+    },
+    "clarabel": {
+      "authors": [
+        "Paul J. Goulart",
+        "Yuwen Chen"
+      ],
+      "title": "Clarabel: An interior-point solver for conic programs with quadratic objectives",
+      "arxiv": "2405.12762",
+      "url": "https://arxiv.org/abs/2405.12762"
+    },
+    "slsqp": {
+      "authors": [
+        "Dieter Kraft"
+      ],
+      "title": "A software package for sequential quadratic programming",
+      "publication": "Technical Report DFVLR-FB88-28(1988)",
+      "evidence": "SciPy official SLSQP documentation references",
+      "url": "https://docs.scipy.org/doc/scipy/reference/optimize.minimize-slsqp.html"
+    }
+  },
+  "research_only_entries": {
+    "optimization": {
+      "title": [
+        "Numerical Optimization"
+      ],
+      "author": [
+        {
+          "given": "Jorge",
+          "family": "Nocedal",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Stephen J.",
+          "family": "Wright",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "DOI": "10.1007/978-0-387-40065-5",
+      "container-title": [
+        "Springer Series in Operations Research and Financial Engineering"
+      ],
+      "volume": null,
+      "page": null,
+      "published": {
+        "date-parts": [
+          [
+            2006
+          ]
+        ]
+      },
+      "publisher": "Springer New York"
+    },
+    "harmonic": {
+      "title": [
+        "An Introduction to Harmonic Analysis"
+      ],
+      "author": [
+        {
+          "given": "Yitzhak",
+          "family": "Katznelson",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "DOI": "10.1017/cbo9781139165372",
+      "container-title": [],
+      "volume": null,
+      "page": null,
+      "published": {
+        "date-parts": [
+          [
+            2004,
+            1,
+            5
+          ]
+        ]
+      },
+      "publisher": "Cambridge University Press"
+    },
+    "bochner": {
+      "title": [
+        "Monotone Funktionen, Stieltjessche Integrale und harmonische Analyse"
+      ],
+      "author": [
+        {
+          "given": "S.",
+          "family": "Bochner",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "DOI": "10.1007/bf01452844",
+      "container-title": [
+        "Mathematische Annalen"
+      ],
+      "volume": "108",
+      "page": "378-410",
+      "published": {
+        "date-parts": [
+          [
+            1933,
+            12
+          ]
+        ]
+      },
+      "publisher": "Springer Science and Business Media LLC"
+    },
+    "positivepolynomials": {
+      "title": [
+        "Polynomials that are positive on an interval"
+      ],
+      "author": [
+        {
+          "given": "Victoria",
+          "family": "Powers",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Bruce",
+          "family": "Reznick",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "DOI": "10.1090/s0002-9947-00-02595-2",
+      "container-title": [
+        "Transactions of the American Mathematical Society"
+      ],
+      "volume": "352",
+      "page": "4677-4692",
+      "published": {
+        "date-parts": [
+          [
+            2000,
+            6,
+            14
+          ]
+        ]
+      },
+      "publisher": "American Mathematical Society (AMS)"
+    },
+    "structured_scaling": {
+      "title": "Structured Scaling of AI Discovery Across Diverse Scientific Domains",
+      "authors": [
+        "Haotian Ye",
+        "Haowei Lin",
+        "Jingyi Tang",
+        "Yizhen Luo",
+        "Rahul Thapa",
+        "Caiyin Yang",
+        "Chang Su",
+        "Rui Yang",
+        "Ruihua Liu",
+        "Rundao Li",
+        "Zeyu Li",
+        "Pengwei Sun",
+        "Chong Gao",
+        "Dachao Ding",
+        "Guangrong He",
+        "Miaolei Zhang",
+        "Lina Sun",
+        "Wenyang Wang",
+        "Yuchen Zhong",
+        "Zhuohao Shen",
+        "Puheng Li",
+        "Pan Lu",
+        "Bianxiao Cui",
+        "Di He",
+        "Jianzhu Ma",
+        "Junfeng Li",
+        "Hexi Baoyin",
+        "Yejin Choi",
+        "Stefano Ermon",
+        "Xiaowen Chu",
+        "Tongyang Li",
+        "Yuzhi Xu",
+        "James Zou"
+      ]
+    },
+    "jansson_chaykin_keil": {
+      "title": [
+        "Rigorous Error Bounds for the Optimal Value in Semidefinite Programming"
+      ],
+      "author": [
+        {
+          "given": "Christian",
+          "family": "Jansson",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Denis",
+          "family": "Chaykin",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Christian",
+          "family": "Keil",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "DOI": "10.1137/050622870",
+      "container-title": [
+        "SIAM Journal on Numerical Analysis"
+      ],
+      "volume": "46",
+      "page": "180-200",
+      "published": {
+        "date-parts": [
+          [
+            2007,
+            12,
+            20
+          ]
+        ]
+      }
+    },
+    "arena_benchmark_newly_consulted": {
+      "title": "Mathematical exploration and discovery at scale",
+      "authors": [
+        "Bogdan Georgiev",
+        "Javier Gómez-Serrano",
+        "Terence Tao",
+        "Adam Zsolt Wagner"
+      ],
+      "url": "https://arxiv.org/abs/2511.02864"
+    }
+  },
+  "identity_limits": [
+    "Public profile names establish repository maintainer identity, not authorship of every file",
+    "No inferred human names for automated Arena handles"
+  ]
+}

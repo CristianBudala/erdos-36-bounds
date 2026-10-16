@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the paper when using these bounds or certificate data."
+title: "Explicit two-sided bounds for Erdős's minimum-overlap problem"
+type: article
+version: 1.0.0
+authors:
+  - family-names: Budala
+    given-names: Cristian
+    affiliation: University of Bucharest
+repository-code: "https://github.com/CristianBudala/erdos-36-bounds"
+license: CC-BY-4.0
+keywords:
+  - minimum overlap
+  - Erdős Problem 36
+  - computer-assisted proof
+  - exact arithmetic

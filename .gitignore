@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.env
+credentials.json
+*.aux
+*.log
+*.out
+*.toc
