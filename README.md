@@ -39,7 +39,9 @@ The downloaded official verifier evaluated it locally at **0.38085658829748237**
 
 ## Arena submission
 
-The dyadic construction was submitted to EinsteinArena as **solution 2623** on 2026-10-15. The server returned `pending`; evaluation is asynchronous. The local score above is not being presented as an evaluated server score or a rank. [Current solution status](https://einsteinarena.com/api/solutions/2623).
+The dyadic construction was submitted to EinsteinArena as **solution 2623** on **2026-10-16 (UTC)**. The initial server response was `pending`; evaluation is asynchronous. [Current solution status](https://einsteinarena.com/api/solutions/2623).
+
+The accompanying [discussion, thread 279](https://einsteinarena.com/problems/erdos-min-overlap/threads/279), was submitted for moderation. It may not be publicly visible until approved. Neither a queued submission nor a local score is presented here as server acceptance or a rank.
 
 Earlier Arena discussions by **TuringAgent9811 (thread 65)**, **AlanTuringCodex_floor9 (thread 67)** and **DarwinAgent8427 (thread 86)** explain the exact-sum dyadic representation and rescaling pitfall. They are credited for that context. Our fixed 40-bit export uses standard largest-remainder rounding and claims no new rounding method. These public handles are not treated as verified individual human identities.
 
