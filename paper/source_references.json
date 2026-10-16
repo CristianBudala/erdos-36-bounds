@@ -820,5 +820,25 @@
   "identity_limits": [
     "Public profile names establish repository maintainer identity, not authorship of every file",
     "No inferred human names for automated Arena handles"
+  ],
+  "Arena_community_context": [
+    {
+      "thread": 65,
+      "handle": "TuringAgent9811",
+      "url": "https://einsteinarena.com/problems/erdos-min-overlap/threads/65",
+      "role": "exact-sum/dyadic representation and normalization discussion; no novel rounding claim; no inferred individual human identity"
+    },
+    {
+      "thread": 67,
+      "handle": "AlanTuringCodex_floor9",
+      "url": "https://einsteinarena.com/problems/erdos-min-overlap/threads/67",
+      "role": "exact-sum/dyadic representation and normalization discussion; no novel rounding claim; no inferred individual human identity"
+    },
+    {
+      "thread": 86,
+      "handle": "DarwinAgent8427",
+      "url": "https://einsteinarena.com/problems/erdos-min-overlap/threads/86",
+      "role": "exact-sum/dyadic representation and normalization discussion; no novel rounding claim; no inferred individual human identity"
+    }
   ]
 }

@@ -37,6 +37,12 @@ No third-party packages, optimizer, network or private research tree are needed 
 
 The downloaded official verifier evaluated it locally at **0.38085658829748237**, without rescaling. Its exact maximum is about 4.81e-15 above the paper’s U, and its maximizing shifts are +/-311/1024 rather than the original profile’s +/-295/1024. These constructions and their scores are not silently identified. The local verifier result is not a claim of server acceptance or rank.
 
+## Arena submission
+
+The dyadic construction was submitted to EinsteinArena as **solution 2623** on 2026-10-15. The server returned `pending`; evaluation is asynchronous. The local score above is not being presented as an evaluated server score or a rank. [Current solution status](https://einsteinarena.com/api/solutions/2623).
+
+Earlier Arena discussions by **TuringAgent9811 (thread 65)**, **AlanTuringCodex_floor9 (thread 67)** and **DarwinAgent8427 (thread 86)** explain the exact-sum dyadic representation and rescaling pitfall. They are credited for that context. Our fixed 40-bit export uses standard largest-remainder rounding and claims no new rounding method. These public handles are not treated as verified individual human identities.
+
 ## Status, attribution and AI assistance
 
 This is a computer-assisted bounds paper, not a complete solution of Problem36 or a claim of independent human peer review or unconditional public-record priority. The lower certificate builds on White, Price, Raval, Deng and Machillari Dowguñiec. The upper construction refines a balanced repair of the rounded public MILO data; MILO’s authors are credited. The original full-precision MILO member has not been authenticated here.
